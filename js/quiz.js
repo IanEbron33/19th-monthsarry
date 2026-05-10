@@ -94,6 +94,34 @@ function showResult() {
   
   if (qMsgElem) qMsgElem.textContent = msgs[score] || msgs[4];
   if (qResultElem) qResultElem.classList.add('show');
+  
+  // Trigger confetti for perfect score
+  if (score === questions.length) {
+    triggerConfetti();
+  }
+}
+
+function triggerConfetti() {
+  const container = document.getElementById('confetti-container');
+  if (!container) return;
+  
+  const icons = ['ph-fill ph-heart', 'ph-fill ph-paw-print', 'ph-fill ph-cat', 'ph-fill ph-star'];
+  const colors = ['#bfa97e', '#c9a87c', '#8a7656', '#f0ebe0'];
+  
+  for (let i = 0; i < 50; i++) {
+    setTimeout(function() {
+      const confetti = document.createElement('i');
+      confetti.className = icons[Math.floor(Math.random() * icons.length)] + ' confetti';
+      confetti.style.left = Math.random() * 100 + '%';
+      confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.animationDuration = (2 + Math.random() * 2) + 's';
+      container.appendChild(confetti);
+      
+      setTimeout(function() {
+        confetti.remove();
+      }, 4000);
+    }, i * 30);
+  }
 }
 
 function resetQuiz() {

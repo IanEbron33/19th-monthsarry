@@ -1,6 +1,98 @@
 // ── AOS ──
 AOS.init({ duration: 700, once: true, offset: 60 });
 
+// ── LOADING SCREEN ──
+window.addEventListener('load', function() {
+  const loader = document.getElementById('loading-screen');
+  if (loader) {
+    setTimeout(function() {
+      loader.classList.add('hidden');
+    }, 1500);
+  }
+});
+
+// ── PARALLAX EFFECT ──
+(function() {
+  const hero = document.getElementById('hero');
+  if (!hero) return;
+  
+  const heroNumber = hero.querySelector('.hero-number');
+  const heroContent = hero.querySelector('.hero-content');
+  const heroPetals = hero.querySelector('.hero-petals');
+  
+  window.addEventListener('scroll', function() {
+    const scrolled = window.scrollY;
+    const heroHeight = hero.offsetHeight;
+    
+    if (scrolled < heroHeight) {
+      if (heroNumber) heroNumber.style.transform = `translate(-50%, -50%) translateY(${scrolled * 0.5}px)`;
+      if (heroContent) heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+      if (heroPetals) heroPetals.style.transform = `translateY(${scrolled * 0.2}px)`;
+    }
+  }, { passive: true });
+})();
+
+// ── PHOTO FILTERS ──
+(function() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const slides = document.querySelectorAll('.swiper-slide');
+  
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter');
+      
+      filterBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      
+      slides.forEach(function(slide) {
+        slide.className = 'swiper-slide';
+        if (filter !== 'none') {
+          slide.classList.add('filter-' + filter);
+        }
+      });
+    });
+  });
+})();
+
+// ── SWIPE NAVIGATION ──
+(function() {
+  let touchStartX = 0;
+  let touchEndX = 0;
+  const sections = ['hero', 'timeline', 'gallery', 'letter', 'map-section', 'stats', 'quiz'];
+  let currentSection = 0;
+  
+  document.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  
+  document.addEventListener('touchend', function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }, { passive: true });
+  
+  function handleSwipe() {
+    const swipeThreshold = 100;
+    const diff = touchStartX - touchEndX;
+    
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0 && currentSection < sections.length - 1) {
+        currentSection++;
+        scrollToSection(sections[currentSection]);
+      } else if (diff < 0 && currentSection > 0) {
+        currentSection--;
+        scrollToSection(sections[currentSection]);
+      }
+    }
+  }
+  
+  function scrollToSection(id) {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+})();
+
 // ── SCROLL PROGRESS BAR ──
 (function () {
   const bar = document.getElementById('scroll-progress');

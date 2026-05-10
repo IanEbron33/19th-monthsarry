@@ -1,8 +1,7 @@
 // ── MAP ──
 // TODO: Replace lat/lng with your actual places
-const map = L.map('map', { zoomControl: true }).setView([10.3157, 123.8854], 13);
+const map = L.map('map', { zoomControl: true }).setView([11.776081804416505, 124.88356665275472], 14.5);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap'
 }).addTo(map);
 
 // Custom cute map pin using Phosphor icon
@@ -15,10 +14,10 @@ const pinIcon = L.divIcon({
 });
 
 const places = [
-  { lat: 10.3157, lng: 123.8854, title: '<i class="ph-fill ph-shooting-star"></i> Where We First Met', desc: 'Replace with your story of this place.' },
-  { lat: 10.3220, lng: 123.8980, title: '<i class="ph-fill ph-bowl-food"></i> Our Favorite Restaurant', desc: 'The place we always go back to.' },
-  { lat: 10.3080, lng: 123.8910, title: '<i class="ph-fill ph-sun-horizon"></i> Our Sunset Spot', desc: 'Where we watch the sun go down.' },
-  { lat: 10.3300, lng: 123.9010, title: '<i class="ph-fill ph-confetti"></i> First Anniversary Spot', desc: 'How we celebrated our first year.' },
+  { lat: 11.77197343534006, lng: 124.88076600368761, title: '<i class="ph-fill ph-shooting-star"></i> Where We First Met', desc: 'Replace with your story of this place.' },
+  { lat: 11.775177490367227, lng: 124.88510705869955, title: '<i class="ph-fill ph-bowl-food"></i> Our Favorite Restaurant', desc: 'The place we always go back to.' },
+  { lat: 11.776476922130447, lng: 124.8828561973491, title: '<i class="ph-fill ph-sun-horizon"></i> Our Sunset Spot', desc: 'Where we watch the sun go down.' },
+  { lat: 11.776036730632955, lng: 124.88550961231236, title: '<i class="ph-fill ph-confetti"></i> First Anniversary Spot', desc: 'How we celebrated our first year.' },
 ];
 
 places.forEach(function (p) {

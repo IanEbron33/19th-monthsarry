@@ -21,10 +21,26 @@
 </head>
 <body>
 
+<!-- Loading Screen -->
+<div class="loading-screen" id="loading-screen">
+  <div class="loading-cat">
+    <i class="ph-fill ph-cat"></i>
+  </div>
+  <div class="loading-text">Loading our memories...</div>
+  <div class="loading-paws">
+    <i class="ph-fill ph-paw-print"></i>
+    <i class="ph-fill ph-paw-print"></i>
+    <i class="ph-fill ph-paw-print"></i>
+  </div>
+</div>
+
+<!-- Confetti Container -->
+<div class="confetti-container" id="confetti-container"></div>
+
 <!-- Peeking Cat (fixed corner) -->
 <div class="peeking-cat" id="peeking-cat">
   <!-- TODO: Download your favorite transparent cat GIF, name it "cat-peeking-corner.gif", and put it in the "assets" folder! -->
-  <img src="assets/peeking-cat.gif" alt="Place your custom peeking cat GIF here">
+  <img src="assets/peeking-cat.gif" alt="Place your custom peeking cat GIF here" loading="lazy">
 </div>
 
 <!-- Scroll Progress Bar -->
@@ -55,10 +71,10 @@
     <p class="hero-eyebrow"><i class="ph-fill ph-paw-print"></i> celebrating our <i class="ph-fill ph-paw-print"></i></p>
     <h1 class="hero-h1">19th <span>Monthsarry</span></h1>
     <!-- TODO: Download your favorite transparent cat GIF, name it "your-custom-cat.gif", and put it in the "assets" folder! -->
-    <img src="assets/cat-hero-section.gif" alt="Place your custom cat GIF here" class="hero-cat-gif">
+    <img src="assets/cat-hero-section.gif" alt="Place your custom cat GIF here" class="hero-cat-gif" loading="lazy">
     <p class="hero-desc">
-      19 months of laughter, inside jokes, late nights,<br>
-      and falling a little more in love every single day.
+      19 months of laughter, cringey jokes, remiscing our memories,<br>
+      and choosing each other every single day.
     </p>
     <div class="hero-badges">
       <div class="badge"><i class="ph-fill ph-paw-print"></i> 19 months together</div>
@@ -66,8 +82,8 @@
       <div class="badge"><i class="ph-fill ph-heart"></i> forever growing</div>
     </div>
     <div class="cta-row">
-      <a href="#timeline" class="btn btn-primary"><i class="ph-fill ph-paw-print"></i> Our Story</a>
-      <a href="#quiz" class="btn btn-outline"><i class="ph-fill ph-cat"></i> Take the Quiz</a>
+      <a href="#timeline" class="btn btn-primary"><i class="ph-fill ph-paw-print"></i> Our Story Kunohay</a>
+      <a href="#quiz" class="btn btn-outline"><i class="ph-fill ph-cat"></i> Take the Quiz, if you trully knows me</a>
     </div>
   </div>
 </section>
@@ -77,7 +93,7 @@
   <div data-aos="fade-up">
     <span class="section-tag">our story</span>
     <h2 class="section-title">The moments that <em>matter</em></h2>
-    <p class="section-sub">Every milestone, every memory — from the very beginning.</p>
+    <p class="section-sub">Every picture we take, it engraved in our memory</p>
   </div>
   <div class="timeline-wrap">
 
@@ -125,6 +141,13 @@
     <span class="section-tag">gallery</span>
     <h2 class="section-title">Snapshots of <em>us</em></h2>
     <p class="section-sub">Swipe through our favorite moments together.</p>
+  </div>
+  <div class="filter-buttons" data-aos="fade-up">
+    <button class="filter-btn active" data-filter="none"><i class="ph ph-image"></i> Original</button>
+    <button class="filter-btn" data-filter="vintage"><i class="ph ph-sun"></i> Vintage</button>
+    <button class="filter-btn" data-filter="warm"><i class="ph ph-fire"></i> Warm</button>
+    <button class="filter-btn" data-filter="cool"><i class="ph ph-snowflake"></i> Cool</button>
+    <button class="filter-btn" data-filter="bw"><i class="ph ph-moon"></i> B&W</button>
   </div>
   <div class="swiper" data-aos="fade-up">
     <div class="swiper-wrapper">
@@ -260,7 +283,7 @@
 <!-- FOOTER -->
 <footer>
   <!-- TODO: Download your favorite transparent cat GIF, name it "cat-footer-section.gif", and put it in the "assets" folder! -->
-  <img src="assets/footer-cat.gif" alt="Place your custom footer cat GIF here" class="footer-cat-gif">
+  <img src="assets/footer-cat.gif" alt="Place your custom footer cat GIF here" class="footer-cat-gif" loading="lazy">
   <div class="f-title">Here's to forever, one month at a time.</div>
   <p>Made with love for our 19th monthsarry<br>Replace this with your names and a sweet note.</p>
   <div class="f-hearts">
