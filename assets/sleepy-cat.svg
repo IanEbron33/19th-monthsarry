@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    @keyframes zzz {
+      0% { opacity: 0; transform: translate(0, 0) scale(0.5); }
+      50% { opacity: 1; transform: translate(10px, -15px) scale(1); }
+      100% { opacity: 0; transform: translate(20px, -30px) scale(1.5); }
+    }
+    .z1 { animation: zzz 2s infinite; font-family: sans-serif; font-weight: bold; fill: #bfa97e; }
+    .z2 { animation: zzz 2s infinite 0.6s; font-family: sans-serif; font-weight: bold; fill: #bfa97e; }
+    .z3 { animation: zzz 2s infinite 1.2s; font-family: sans-serif; font-weight: bold; fill: #bfa97e; }
+    @keyframes breathe {
+      0%, 100% { transform: scaleY(1); }
+      50% { transform: scaleY(1.08); }
+    }
+    .body { transform-origin: 50px 80px; animation: breathe 2s infinite; }
+  </style>
+  <g class="body">
+    <path d="M 10 80 C 10 50, 80 50, 80 80 Z" fill="#c9a87c"/>
+    <path d="M 60 80 C 60 60, 95 60, 95 80 Z" fill="#bfa97e"/>
+    <path d="M 70 70 Q 75 73 80 70" fill="none" stroke="#4a3c2e" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 85 70 Q 90 73 95 70" fill="none" stroke="#4a3c2e" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="65,65 65,50 75,60" fill="#bfa97e"/>
+    <polygon points="90,65 90,50 80,60" fill="#bfa97e"/>
+  </g>
+  <text x="30" y="40" class="z1" font-size="12">Z</text>
+  <text x="30" y="40" class="z2" font-size="16">Z</text>
+  <text x="30" y="40" class="z3" font-size="20">Z</text>
+</svg>

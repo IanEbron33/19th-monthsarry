@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    @keyframes tail {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(20deg); }
+    }
+    .tail { transform-origin: 85px 75px; animation: tail 1s ease-in-out infinite; }
+  </style>
+  <path d="M 20 80 Q 20 40 50 40 Q 80 40 80 80 Z" fill="#bfa97e"/>
+  <polygon points="20,50 25,20 45,40" fill="#bfa97e"/>
+  <polygon points="80,50 75,20 55,40" fill="#bfa97e"/>
+  <!-- Eyes -->
+  <circle cx="35" cy="55" r="4" fill="#4a3c2e"/>
+  <circle cx="65" cy="55" r="4" fill="#4a3c2e"/>
+  <!-- Mouth -->
+  <path d="M 45 65 Q 50 70 55 65" fill="none" stroke="#4a3c2e" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Tail -->
+  <path class="tail" d="M 80 75 Q 95 75 95 55 Q 95 45 90 45 Q 85 45 85 55 Q 85 65 75 65" fill="none" stroke="#bfa97e" stroke-width="8" stroke-linecap="round"/>
+</svg>

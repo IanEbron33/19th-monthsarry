@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    @keyframes pop {
+      0%, 100% { transform: translateY(0); }
+      10%, 40% { transform: translateY(-20px); }
+    }
+    .cat { animation: pop 3s infinite; transform-origin: center bottom; }
+  </style>
+  <g class="cat">
+    <path d="M 30 70 L 30 30 Q 50 20 70 30 L 70 70 Z" fill="#bfa97e"/>
+    <polygon points="30,35 30,15 45,25" fill="#bfa97e"/>
+    <polygon points="70,35 70,15 55,25" fill="#bfa97e"/>
+    <circle cx="42" cy="40" r="4" fill="#4a3c2e"/>
+    <circle cx="58" cy="40" r="4" fill="#4a3c2e"/>
+  </g>
+  <rect x="20" y="60" width="60" height="30" fill="#c9a87c" stroke="#4a3c2e" stroke-width="2"/>
+  <rect x="15" y="60" width="70" height="10" fill="#bfa97e" stroke="#4a3c2e" stroke-width="2"/>
+</svg>
