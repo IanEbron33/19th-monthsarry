@@ -2,28 +2,28 @@
 // TODO: Personalize these questions and answers!
 const questions = [
   {
-    q: "What is [Your Name]'s favorite food?",
-    opts: ["[Food A]", "[Food B]", "[Food C]", "[Food D]"],
+    q: "Ano na foods or drinks an napasakit akon tiyan?",
+    opts: ["Coffee with Milk", "Dinosour", "Pagong", "Juice"],
     ans: 0
   },
   {
     q: "Where did we go on our very first date?",
-    opts: ["[Place A]", "[Place B]", "[Place C]", "[Place D]"],
-    ans: 1
+    opts: ["Ernes", "Imelda's Park", "Seaside", "Metro"],
+    ans: 0
   },
   {
-    q: "What movie do I never get tired of watching?",
-    opts: ["[Movie A]", "[Movie B]", "[Movie C]", "[Movie D]"],
+    q: "How would you describe my personality?",
+    opts: ["Extrovert", "Inverter", "Introvert", "Electric Fan"],
     ans: 2
   },
   {
     q: "What's my love language?",
-    opts: ["Words of Affirmation", "Quality Time", "Acts of Service", "Physical Touch"],
-    ans: 1
+    opts: ["Words of Affirmation", "Pandesal ha SSU", "Dutch Mill", "Idk hahaha"],
+    ans: 0
   },
   {
-    q: "How do I feel about you right now?",
-    opts: ["Pretty okay", "Really happy", "So in love", "All of the above 💕"],
+    q: "Mahilig ako han?",
+    opts: ["Haaa?", "Gravy", "Fishball", "Kiss mo hehe"],
     ans: 3
   }
 ];
@@ -85,11 +85,11 @@ function showResult() {
   if (qScoreElem) qScoreElem.textContent = `${score}/${questions.length}`;
   
   const msgs = [
-    "We still have some catching up to do! 😄",
-    "Not bad! Keep paying attention. 💬",
-    "Pretty good! You know me well. 🌸",
-    "You almost have me figured out! 💕",
-    "You know me so well. I love you! 💕💕"
+    "Yayy dre maaram tskkk... tskk...",
+    "Try harder baks haha",
+    "Average la haha",
+    "Alam mo ahhh haha",
+    "Nakss kadadati haha, tagi kuno ak kiss hahaha"
   ];
   
   if (qMsgElem) qMsgElem.textContent = msgs[score] || msgs[4];

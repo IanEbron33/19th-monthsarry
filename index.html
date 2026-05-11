@@ -1,306 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>19 Months & Counting</title>
-<meta name="description" content="Celebrating 19 beautiful months together — our story, our memories, our love.">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<!-- Icons - Phosphor Icons (cute, rounded) -->
-<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-<!-- AOS - scroll animations -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-<!-- Swiper - photo gallery -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
-<!-- Leaflet - map -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-<!-- Custom CSS -->
-<link rel="stylesheet" href="css/style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>19 Months & Counting</title>
+  <meta name="description" content="Celebrating 19 beautiful months together — our story, our memories, our love.">
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Icons - Phosphor Icons (cute, rounded) -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <!-- AOS - scroll animations -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- Swiper - photo gallery -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+  <!-- Leaflet - map -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<!-- Loading Screen -->
-<div class="loading-screen" id="loading-screen">
-  <div class="loading-cat">
-    <i class="ph-fill ph-cat"></i>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-cat">
+      <i class="ph-fill ph-cat"></i>
+    </div>
+    <div class="loading-text">Loading our memories...</div>
+    <div class="loading-paws">
+      <i class="ph-fill ph-paw-print"></i>
+      <i class="ph-fill ph-paw-print"></i>
+      <i class="ph-fill ph-paw-print"></i>
+    </div>
   </div>
-  <div class="loading-text">Loading our memories...</div>
-  <div class="loading-paws">
-    <i class="ph-fill ph-paw-print"></i>
-    <i class="ph-fill ph-paw-print"></i>
-    <i class="ph-fill ph-paw-print"></i>
+
+  <!-- Confetti Container -->
+  <div class="confetti-container" id="confetti-container"></div>
+
+  <!-- Peeking Cat (fixed corner) -->
+  <div class="peeking-cat" id="peeking-cat">
+    <!-- TODO: Download your favorite transparent cat GIF, name it "cat-peeking-corner.gif", and put it in the "assets" folder! -->
+    <img src="assets/peeking-cat.gif" alt="Place your custom peeking cat GIF here" loading="lazy">
   </div>
-</div>
 
-<!-- Confetti Container -->
-<div class="confetti-container" id="confetti-container"></div>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
 
-<!-- Peeking Cat (fixed corner) -->
-<div class="peeking-cat" id="peeking-cat">
-  <!-- TODO: Download your favorite transparent cat GIF, name it "cat-peeking-corner.gif", and put it in the "assets" folder! -->
-  <img src="assets/peeking-cat.gif" alt="Place your custom peeking cat GIF here" loading="lazy">
-</div>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo"><i class="ph-fill ph-cat"></i> Us</div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <i class="ph ph-list"></i>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#letter">Letter</a></li>
+      <li><a href="#map-section">Places</a></li>
+      <li><a href="#stats">Stats</a></li>
+      <li><a href="#quiz">Quiz</a></li>
+    </ul>
+  </nav>
 
-<!-- Scroll Progress Bar -->
-<div class="scroll-progress" id="scroll-progress"></div>
+  <!-- ── 1. HERO ── -->
+  <section id="hero">
+    <div class="hero-petals" id="petals"></div>
+    <div class="hero-number">19</div>
+    <div class="hero-content">
+      <p class="hero-eyebrow"><i class="ph-fill ph-paw-print"></i> celebrating our <i class="ph-fill ph-paw-print"></i>
+      </p>
+      <h1 class="hero-h1">19th <span>Monthsarry</span></h1>
+      <!-- TODO: Download your favorite transparent cat GIF, name it "your-custom-cat.gif", and put it in the "assets" folder! -->
+      <img src="assets/cat-hero-section.gif" alt="Place your custom cat GIF here" class="hero-cat-gif" loading="lazy">
+      <p class="hero-desc">
+        19 months of laughter, cringey jokes, remiscing our memories,<br>
+        and choosing each other every single day.
+      </p>
+      <div class="hero-badges">
+        <div class="badge"><i class="ph-fill ph-paw-print"></i> 19 months together</div>
+        <div class="badge"><i class="ph-fill ph-cat"></i> counting every moment</div>
+        <div class="badge"><i class="ph-fill ph-heart"></i> forever growing</div>
+      </div>
+      <div class="cta-row">
+        <a href="#gallery" class="btn btn-primary"><i class="ph-fill ph-image"></i> See Gallery</a>
+        <a href="#quiz" class="btn btn-outline"><i class="ph-fill ph-cat"></i> Take the Quiz, if you trully knows me</a>
+      </div>
+    </div>
+  </section>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo"><i class="ph-fill ph-cat"></i> 19th Monthsarry</div>
-  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-    <i class="ph ph-list"></i>
-  </button>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#timeline">Story</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#letter">Letter</a></li>
-    <li><a href="#map-section">Places</a></li>
-    <li><a href="#stats">Stats</a></li>
-    <li><a href="#quiz">Quiz</a></li>
-  </ul>
-</nav>
+  <!-- ── 3. GALLERY ── -->
+  <section id="gallery">
+    <div data-aos="fade-up">
+      <span class="section-tag">gallery</span>
+      <h2 class="section-title">Random Photos of <em>us</em></h2>
+      <p class="section-sub">Swipe through our favorite moments together.</p>
+    </div>
+    <div class="filter-buttons" data-aos="fade-up">
+      <button class="filter-btn active" data-filter="none"><i class="ph ph-image"></i> Original</button>
+      <button class="filter-btn" data-filter="vintage"><i class="ph ph-sun"></i> Vintage</button>
+      <button class="filter-btn" data-filter="warm"><i class="ph ph-fire"></i> Warm</button>
+      <button class="filter-btn" data-filter="cool"><i class="ph ph-snowflake"></i> Cool</button>
+      <button class="filter-btn" data-filter="bw"><i class="ph ph-moon"></i> B&W</button>
+    </div>
+    <div class="swiper" data-aos="fade-up">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/timeline-images/image1.webp" alt="Gallery image 1"></div>
+        <div class="swiper-slide"><img src="assets/timeline-images/image2.webp" alt="Gallery image 2"></div>
+        <div class="swiper-slide"><img src="assets/timeline-images/image3.webp" alt="Gallery image 3"></div>
+        <div class="swiper-slide"><img src="assets/timeline-images/image4.webp" alt="Gallery image 4"></div>
+        <div class="swiper-slide"><img src="assets/timeline-images/image5.webp" alt="Gallery image 5"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
 
-<!-- ── 1. HERO ── -->
-<section id="hero">
-  <div class="hero-petals" id="petals"></div>
-  <div class="hero-number">19</div>
-  <div class="hero-content">
-    <p class="hero-eyebrow"><i class="ph-fill ph-paw-print"></i> celebrating our <i class="ph-fill ph-paw-print"></i></p>
-    <h1 class="hero-h1">19th <span>Monthsarry</span></h1>
-    <!-- TODO: Download your favorite transparent cat GIF, name it "your-custom-cat.gif", and put it in the "assets" folder! -->
-    <img src="assets/cat-hero-section.gif" alt="Place your custom cat GIF here" class="hero-cat-gif" loading="lazy">
-    <p class="hero-desc">
-      19 months of laughter, cringey jokes, remiscing our memories,<br>
-      and choosing each other every single day.
+  <!-- ── 4. LOVE LETTER ── -->
+  <section id="letter">
+    <div data-aos="fade-up">
+      <span class="section-tag">from the heart</span>
+      <h2 class="section-title">A letter <em>to you</em></h2>
+      <p class="section-sub">Some things are better said in writing.</p>
+    </div>
+    <div class="letter-card" data-aos="fade-up">
+      <div class="letter-text" id="letter-text">
+        <span class="letter-line">My dearest <strong>Baboo</strong>,</span>
+        <br><br>
+        <span class="letter-line">Monthsarry naliwat hano baks hahaha, perme nalagud hano? hahahaha jk la, I'll ask a
+          favor to read this breifly baks, short message la po adi hehe.</span>
+        <span class="letter-line"></span>
+        <br>
+        <span class="letter-line">When I think of you I'm reminded of the beautiful plains of lows, the distance between
+          us is breaking my spirit. My time and experience without you are meaningless to me. Falling in love with you
+          is the easiest and the best thing i have ever done, nothing matters to me but you. And every seconds, minutes,
+          hours, and days I am alive, I'm aware of this. I loved you the day I met you, I love you today and I will love
+          you for the rest of my life.
+          <br>
+          - From the movie "Green Book".
+        </span>
+        <br>
+        <span class="letter-line">Thank you for being my person, for every good morning and every goodnight, for every
+          days we shared and every adventure we chased together.</span>
+        <span class="letter-line">More Monthsarry to come and stay strong haat perme hehe.</span>
+      </div>
+      <div class="letter-sig">
+        With all my love,<br>
+        <em>Iantot :)</em>
+        <img src="assets/sleepy-cat.svg" alt="sleeping cat" class="letter-cat-gif">
+      </div>
+      <div class="letter-hearts">
+        <span class="heart-beat" style="animation-delay: 0s"><i class="ph-fill ph-paw-print"></i></span>
+        <span class="heart-beat" style="animation-delay: .2s"><i class="ph-fill ph-heart"></i></span>
+        <span class="heart-beat" style="animation-delay: .4s"><i class="ph-fill ph-paw-print"></i></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 5. MAP ── -->
+  <section id="map-section">
+    <div data-aos="fade-up">
+      <span class="section-tag">our places</span>
+      <h2 class="section-title">Where we've <em>been</em></h2>
+      <p class="section-sub">Every pin is a place that holds a piece of our story.</p>
+    </div>
+    <div id="map" data-aos="zoom-in"></div>
+    <p class="map-hint">
+      <i class="ph-fill ph-map-pin"></i> Tap a pin to see the memory attached to it.
     </p>
-    <div class="hero-badges">
-      <div class="badge"><i class="ph-fill ph-paw-print"></i> 19 months together</div>
-      <div class="badge"><i class="ph-fill ph-cat"></i> counting every moment</div>
-      <div class="badge"><i class="ph-fill ph-heart"></i> forever growing</div>
-    </div>
-    <div class="cta-row">
-      <a href="#timeline" class="btn btn-primary"><i class="ph-fill ph-paw-print"></i> Our Story Kunohay</a>
-      <a href="#quiz" class="btn btn-outline"><i class="ph-fill ph-cat"></i> Take the Quiz, if you trully knows me</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── 2. TIMELINE ── -->
-<section id="timeline">
-  <div data-aos="fade-up">
-    <span class="section-tag">our story</span>
-    <h2 class="section-title">The moments that <em>matter</em></h2>
-    <p class="section-sub">Every picture we take, it engraved in our memory</p>
-  </div>
-  <div class="timeline-wrap">
-
-    <div class="tl-item" data-aos="fade-left">
-      <div class="tl-month">Month 1 · [Your Start Date]</div>
-      <div class="tl-title"><i class="ph-fill ph-paw-print"></i> The Beginning</div>
-      <div class="tl-desc">Replace this with your own story of how it all started — that first conversation, first meeting, the moment you knew.</div>
-      <div class="tl-img"><i class="ph ph-camera"></i> Add your first photo here</div>
+  <!-- ── 6. STATS / COUNTDOWN ── -->
+  <section id="stats">
+    <div data-aos="fade-up">
+      <span class="section-tag">by the numbers</span>
+      <h2 class="section-title">19 months in <em>numbers</em></h2>
+      <p class="section-sub">Real stats about us — update these to make them true!</p>
     </div>
 
-    <div class="tl-item" data-aos="fade-left" data-aos-delay="100">
-      <div class="tl-month">Month 3 · [Date]</div>
-      <div class="tl-title"><i class="ph-fill ph-cat"></i> First Adventure</div>
-      <div class="tl-desc">Your first trip or date out together — where did you go? What made it special?</div>
-      <div class="tl-img"><i class="ph ph-camera"></i> Add your photo here</div>
+    <div class="countdown-row" data-aos="fade-up">
+      <div class="cd-box"><span class="cd-num" id="cd-days">000</span><span class="cd-label">days</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">hours</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-mins">00</span><span class="cd-label">minutes</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-secs">00</span><span class="cd-label">seconds</span></div>
+    </div>
+    <p class="countdown-caption">time since we became <em>us</em> <i class="ph-fill ph-heart"></i></p>
+
+    <div class="stats-grid" data-aos="fade-up">
+      <div class="stat-card">
+        <div class="stat-num">570+</div>
+        <div class="stat-label">Days Together</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num"><i class="ph-fill ph-infinity" style="font-size:1.8rem"></i></div>
+        <div class="stat-label">Good Morning Texts</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1000+</div>
+        <div class="stat-label">I Love You</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Anniversary</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">19</div>
+        <div class="stat-label">Monthsarries</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num"><i class="ph-fill ph-check-circle" style="font-size:1.8rem"></i></div>
+        <div class="stat-label">Worth Every Second</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 7. QUIZ ── -->
+  <section id="quiz">
+    <div data-aos="fade-up">
+      <span class="section-tag">how well do you know me?</span>
+      <h2 class="section-title">The <em>Ultimate</em> Couples Quiz</h2>
+      <p class="section-sub">Let's see how much you've been paying attention.</p>
     </div>
 
-    <div class="tl-item" data-aos="fade-left" data-aos-delay="150">
-      <div class="tl-month">Month 7 · [Date]</div>
-      <div class="tl-title"><i class="ph-fill ph-cake"></i> First Celebration</div>
-      <div class="tl-desc">The first monthsarry, birthday, or special day you celebrated as a couple.</div>
-      <div class="tl-img"><i class="ph ph-camera"></i> Add your photo here</div>
+    <div class="quiz-card" data-aos="fade-up">
+      <div class="quiz-progress-bar">
+        <div class="quiz-progress-fill" id="quiz-bar" style="width:0%"></div>
+      </div>
+
+      <div id="quiz-body">
+        <div class="quiz-q-num" id="q-num">Question 1 of 5</div>
+        <div class="quiz-question" id="q-text">What is [Your Name]'s favorite food?</div>
+        <div class="quiz-options" id="q-opts"></div>
+      </div>
+
+      <div class="quiz-result" id="quiz-result">
+        <div class="quiz-score" id="quiz-score">5/5</div>
+        <div class="quiz-msg" id="quiz-msg">You know me so well. I love you!</div>
+        <button class="btn btn-primary" onclick="resetQuiz()"><i class="ph ph-arrows-counter-clockwise"></i> Try
+          Again</button>
+      </div>
     </div>
+  </section>
 
-    <div class="tl-item" data-aos="fade-left" data-aos-delay="200">
-      <div class="tl-month">Month 12 · [Date]</div>
-      <div class="tl-title"><i class="ph-fill ph-confetti"></i> One Full Year</div>
-      <div class="tl-desc">A whole year — 365 days of choosing each other. What did you do to celebrate?</div>
-      <div class="tl-img"><i class="ph ph-camera"></i> Add your photo here</div>
+  <!-- FOOTER -->
+  <footer>
+    <!-- TODO: Download your favorite transparent cat GIF, name it "cat-footer-section.gif", and put it in the "assets" folder! -->
+    <img src="assets/footer-cat.gif" alt="Place your custom footer cat GIF here" class="footer-cat-gif" loading="lazy">
+    <div class="f-title">May the forever be with us, Baks.</div>
+    <div class="f-hearts">
+      <i class="ph-fill ph-paw-print"></i>
+      <i class="ph-fill ph-cat"></i>
+      <i class="ph-fill ph-paw-print"></i>
     </div>
-
-    <div class="tl-item" data-aos="fade-left" data-aos-delay="250">
-      <div class="tl-month">Month 19 · Today</div>
-      <div class="tl-title"><i class="ph-fill ph-paw-print"></i> Right Now</div>
-      <div class="tl-desc">Here we are — still laughing, still growing, still choosing each other. Happy 19th monthsarry!</div>
-      <div class="tl-img"><i class="ph ph-camera"></i> Add your most recent photo</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ── 3. GALLERY ── -->
-<section id="gallery">
-  <div data-aos="fade-up">
-    <span class="section-tag">gallery</span>
-    <h2 class="section-title">Snapshots of <em>us</em></h2>
-    <p class="section-sub">Swipe through our favorite moments together.</p>
-  </div>
-  <div class="filter-buttons" data-aos="fade-up">
-    <button class="filter-btn active" data-filter="none"><i class="ph ph-image"></i> Original</button>
-    <button class="filter-btn" data-filter="vintage"><i class="ph ph-sun"></i> Vintage</button>
-    <button class="filter-btn" data-filter="warm"><i class="ph ph-fire"></i> Warm</button>
-    <button class="filter-btn" data-filter="cool"><i class="ph ph-snowflake"></i> Cool</button>
-    <button class="filter-btn" data-filter="bw"><i class="ph ph-moon"></i> B&W</button>
-  </div>
-  <div class="swiper" data-aos="fade-up">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><i class="ph-fill ph-camera"></i> Your favorite photo</div>
-      <div class="swiper-slide"><i class="ph-fill ph-sun-horizon"></i> A sunset together</div>
-      <div class="swiper-slide"><i class="ph-fill ph-bowl-food"></i> That unforgettable meal</div>
-      <div class="swiper-slide"><i class="ph-fill ph-star-four"></i> A fun day out</div>
-      <div class="swiper-slide"><i class="ph-fill ph-flower-lotus"></i> A peaceful moment</div>
-      <div class="swiper-slide"><i class="ph-fill ph-envelope-simple"></i> Just the two of us</div>
-    </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</section>
-
-<!-- ── 4. LOVE LETTER ── -->
-<section id="letter">
-  <div data-aos="fade-up">
-    <span class="section-tag">from the heart</span>
-    <h2 class="section-title">A letter <em>to you</em></h2>
-    <p class="section-sub">Some things are better said in writing.</p>
-  </div>
-  <div class="letter-card" data-aos="fade-up">
-    <div class="letter-text" id="letter-text">
-      <span class="letter-line">My dearest <strong>[Partner's Name]</strong>,</span>
-      <br><br>
-      <span class="letter-line">I never thought 19 months would feel both like a lifetime and a blink at the same time.</span>
-      <span class="letter-line">Replace this with your heartfelt message — all the things you want them to read and re-read on the days when they need to be reminded how deeply loved they are.</span>
-      <br><br>
-      <span class="letter-line">Write about the little things: the way they laugh, the warmth of their presence, the quiet moments that mean the most. Make it yours — make it real.</span>
-      <br><br>
-      <span class="letter-line">Thank you for being my person, for every good morning and every goodnight, for every argument we worked through and every adventure we chased together.</span>
-      <span class="letter-line">Here's to 19 months, and to all the months still ahead of us.</span>
-    </div>
-    <div class="letter-sig">
-      With all my love,<br>
-      <em>[Your Name]</em>
-      <img src="assets/sleepy-cat.svg" alt="sleeping cat" class="letter-cat-gif">
-    </div>
-    <div class="letter-hearts">
-      <span class="heart-beat" style="animation-delay: 0s"><i class="ph-fill ph-paw-print"></i></span>
-      <span class="heart-beat" style="animation-delay: .2s"><i class="ph-fill ph-heart"></i></span>
-      <span class="heart-beat" style="animation-delay: .4s"><i class="ph-fill ph-paw-print"></i></span>
-    </div>
-  </div>
-</section>
-
-<!-- ── 5. MAP ── -->
-<section id="map-section">
-  <div data-aos="fade-up">
-    <span class="section-tag">our places</span>
-    <h2 class="section-title">Where we've <em>been</em></h2>
-    <p class="section-sub">Every pin is a place that holds a piece of our story.</p>
-  </div>
-  <div id="map" data-aos="zoom-in"></div>
-  <p class="map-hint">
-    <i class="ph-fill ph-map-pin"></i> Tap a pin to see the memory attached to it.
-  </p>
-</section>
-
-<!-- ── 6. STATS / COUNTDOWN ── -->
-<section id="stats">
-  <div data-aos="fade-up">
-    <span class="section-tag">by the numbers</span>
-    <h2 class="section-title">19 months in <em>numbers</em></h2>
-    <p class="section-sub">Real stats about us — update these to make them true!</p>
-  </div>
-
-  <div class="countdown-row" data-aos="fade-up">
-    <div class="cd-box"><span class="cd-num" id="cd-days">000</span><span class="cd-label">days</span></div>
-    <div class="cd-box"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">hours</span></div>
-    <div class="cd-box"><span class="cd-num" id="cd-mins">00</span><span class="cd-label">minutes</span></div>
-    <div class="cd-box"><span class="cd-num" id="cd-secs">00</span><span class="cd-label">seconds</span></div>
-  </div>
-  <p class="countdown-caption">time since we became <em>us</em> <i class="ph-fill ph-heart"></i></p>
-
-  <div class="stats-grid" data-aos="fade-up">
-    <div class="stat-card">
-      <div class="stat-num">570+</div>
-      <div class="stat-label">Days Together</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num"><i class="ph-fill ph-infinity" style="font-size:1.8rem"></i></div>
-      <div class="stat-label">Good Morning Texts</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num">100+</div>
-      <div class="stat-label">Meals Shared</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num">1</div>
-      <div class="stat-label">Person I Choose</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num">19</div>
-      <div class="stat-label">Monthsarries</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num"><i class="ph-fill ph-check-circle" style="font-size:1.8rem"></i></div>
-      <div class="stat-label">Worth Every Second</div>
-    </div>
-  </div>
-</section>
-
-<!-- ── 7. QUIZ ── -->
-<section id="quiz">
-  <div data-aos="fade-up">
-    <span class="section-tag">how well do you know me?</span>
-    <h2 class="section-title">The <em>Ultimate</em> Couples Quiz</h2>
-    <p class="section-sub">Let's see how much you've been paying attention.</p>
-  </div>
-
-  <div class="quiz-card" data-aos="fade-up">
-    <div class="quiz-progress-bar">
-      <div class="quiz-progress-fill" id="quiz-bar" style="width:0%"></div>
-    </div>
-
-    <div id="quiz-body">
-      <div class="quiz-q-num" id="q-num">Question 1 of 5</div>
-      <div class="quiz-question" id="q-text">What is [Your Name]'s favorite food?</div>
-      <div class="quiz-options" id="q-opts"></div>
-    </div>
-
-    <div class="quiz-result" id="quiz-result">
-      <div class="quiz-score" id="quiz-score">5/5</div>
-      <div class="quiz-msg" id="quiz-msg">You know me so well. I love you!</div>
-      <button class="btn btn-primary" onclick="resetQuiz()"><i class="ph ph-arrows-counter-clockwise"></i> Try Again</button>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <!-- TODO: Download your favorite transparent cat GIF, name it "cat-footer-section.gif", and put it in the "assets" folder! -->
-  <img src="assets/footer-cat.gif" alt="Place your custom footer cat GIF here" class="footer-cat-gif" loading="lazy">
-  <div class="f-title">Here's to forever, one month at a time.</div>
-  <p>Made with love for our 19th monthsarry<br>Replace this with your names and a sweet note.</p>
-  <div class="f-hearts">
-    <i class="ph-fill ph-paw-print"></i>
-    <i class="ph-fill ph-cat"></i>
-    <i class="ph-fill ph-paw-print"></i>
-  </div>
-</footer>
+  </footer>
 
 
-<!-- Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 
-<script src="js/main.js"></script>
-<script src="js/map.js"></script>
-<script src="js/quiz.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/quiz.js"></script>
 </body>
+
 </html>
