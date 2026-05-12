@@ -171,7 +171,7 @@ new Swiper('.swiper', {
 
 // ── COUNTDOWN ──
 // TODO: Replace this date with your actual start date
-const START = new Date('2023-10-01T00:00:00');
+const START = new Date('2024-12-10T00:00:00');
 function updateCountdown() {
   const now = new Date();
   const diff = now - START;
